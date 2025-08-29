@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro de E-mails IA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Filtro de E-mails IA</h1>
+            <p>Cole o texto de um e-mail abaixo, e a nossa IA irá classificá-lo e sugerir uma resposta.</p>
+        </header>
+
+        <main>
+            <form id="email-form">
+                <textarea id="email-text" placeholder="Cole o conteúdo do e-mail aqui..." rows="12" required></textarea>
+                <button type="submit" id="submit-button">Analisar E-mail</button>
+            </form>
+            
+            <div id="results-container" class="results" style="display:none;">
+                <h2>Análise da IA</h2>
+                <div class="result-item">
+                    <strong>Categoria:</strong>
+                    <span id="category-badge"></span>
+                </div>
+                <div class="result-item">
+                    <strong>Sugestão de Resposta:</strong>
+                    <p id="suggested-response"></p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

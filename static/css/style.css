@@ -1,0 +1,144 @@
+/* Estilos Gerais e Reset Básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container Principal */
+.container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+/* Cabeçalho */
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 2em;
+}
+
+header p {
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+/* Formulário */
+#email-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#email-text {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 150px;
+}
+
+#email-text:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+#submit-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#submit-button:hover {
+    background-color: #0056b3;
+}
+
+#submit-button:active {
+    transform: scale(0.98);
+}
+
+#submit-button:disabled {
+    background-color: #a0c3e6;
+    cursor: not-allowed;
+}
+
+
+/* Área de Resultados */
+.results {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #dfe6e9;
+    text-align: left;
+}
+
+.results h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.result-item {
+    margin-bottom: 15px;
+}
+
+.result-item strong {
+    color: #34495e;
+}
+
+#suggested-response {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #dfe6e9;
+    white-space: pre-wrap; /* Mantém a formatação da resposta da IA */
+}
+
+/* Badge de Categoria (com cores) */
+#category-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+.productive {
+    background-color: #28a745; /* Verde */
+}
+
+.unproductive {
+    background-color: #ffc107; /* Amarelo */
+    color: #333; /* Texto escuro para melhor contraste com amarelo */
+}
+
+.error {
+    background-color: #dc3545; /* Vermelho */
+}
